@@ -1,0 +1,688 @@
+{
+    "chemistry_questions": [
+        {
+            "chapter": "Some Basic Concepts in Chemistry",
+            "difficulty": "easy",
+            "question": "What is the SI unit of amount of substance?",
+            "options": [
+                "Mole",
+                "Gram",
+                "Litre",
+                "Kilogram"
+            ],
+            "answer": "Mole"
+        },
+        {
+            "chapter": "Some Basic Concepts in Chemistry",
+            "difficulty": "medium",
+            "question": "What is the mass of one mole of water?",
+            "options": [
+                "18 grams",
+                "16 grams",
+                "20 grams",
+                "22 grams"
+            ],
+            "answer": "18 grams"
+        },
+        {
+            "chapter": "Some Basic Concepts in Chemistry",
+            "difficulty": "hard",
+            "question": "What is the percentage of oxygen in water (H2O)?",
+            "options": [
+                "88.89%",
+                "11.11%",
+                "33.33%",
+                "66.67%"
+            ],
+            "answer": "88.89%"
+        },
+        {
+            "chapter": "Atomic Structure",
+            "difficulty": "easy",
+            "question": "Who discovered the electron?",
+            "options": [
+                "J.J. Thomson",
+                "Ernest Rutherford",
+                "Niels Bohr",
+                "James Chadwick"
+            ],
+            "answer": "J.J. Thomson"
+        },
+        {
+            "chapter": "Atomic Structure",
+            "difficulty": "medium",
+            "question": "What is the maximum number of electrons that can be accommodated in the M shell?",
+            "options": [
+                "8",
+                "18",
+                "32",
+                "2"
+            ],
+            "answer": "18"
+        },
+        {
+            "chapter": "Atomic Structure",
+            "difficulty": "hard",
+            "question": "What is the de Broglie wavelength of a particle with mass 1 mg moving with a velocity of 1 m/s?",
+            "options": [
+                "6.626 × 10^-27 m",
+                "6.626 × 10^-30 m",
+                "6.626 × 10^-24 m",
+                "6.626 × 10^-21 m"
+            ],
+            "answer": "6.626 × 10^-30 m"
+        },
+        {
+            "chapter": "Chemical Bonding and Molecular Structure",
+            "difficulty": "easy",
+            "question": "What type of bond is formed between two atoms with similar electronegativities?",
+            "options": [
+                "Ionic bond",
+                "Covalent bond",
+                "Metallic bond",
+                "Hydrogen bond"
+            ],
+            "answer": "Covalent bond"
+        },
+        {
+            "chapter": "Chemical Bonding and Molecular Structure",
+            "difficulty": "medium",
+            "question": "Which of the following molecules has a linear shape?",
+            "options": [
+                "H2O",
+                "NH3",
+                "CO2",
+                "CH4"
+            ],
+            "answer": "CO2"
+        },
+        {
+            "chapter": "Chemical Bonding and Molecular Structure",
+            "difficulty": "hard",
+            "question": "What is the bond angle in a molecule with sp2 hybridization?",
+            "options": [
+                "90°",
+                "109.5°",
+                "120°",
+                "180°"
+            ],
+            "answer": "120°"
+        },
+        {
+            "chapter": "Chemical Thermodynamics",
+            "difficulty": "easy",
+            "question": "What is the first law of thermodynamics?",
+            "options": [
+                "Energy cannot be created or destroyed",
+                "Entropy always increases",
+                "Heat flows from hot to cold",
+                "Pressure and volume are inversely related"
+            ],
+            "answer": "Energy cannot be created or destroyed"
+        },
+        {
+            "chapter": "Chemical Thermodynamics",
+            "difficulty": "medium",
+            "question": "What is the standard enthalpy change for the reaction H2 + 1/2 O2 -> H2O?",
+            "options": [
+                "-285.8 kJ/mol",
+                "-241.8 kJ/mol",
+                "-226.8 kJ/mol",
+                "-200.8 kJ/mol"
+            ],
+            "answer": "-285.8 kJ/mol"
+        },
+        {
+            "chapter": "Chemical Thermodynamics",
+            "difficulty": "hard",
+            "question": "What is the Gibbs free energy change for a reaction at equilibrium?",
+            "options": [
+                "Positive",
+                "Negative",
+                "Zero",
+                "Infinite"
+            ],
+            "answer": "Zero"
+        },
+        {
+            "chapter": "Solutions",
+            "difficulty": "easy",
+            "question": "What is the molarity of a solution containing 1 mole of solute in 1 litre of solution?",
+            "options": [
+                "1 M",
+                "0.1 M",
+                "10 M",
+                "0.01 M"
+            ],
+            "answer": "1 M"
+        },
+        {
+            "chapter": "Solutions",
+            "difficulty": "medium",
+            "question": "What is the molality of a solution containing 1 mole of solute in 1 kg of solvent?",
+            "options": [
+                "1 m",
+                "0.1 m",
+                "10 m",
+                "0.01 m"
+            ],
+            "answer": "1 m"
+        },
+        {
+            "chapter": "Solutions",
+            "difficulty": "hard",
+            "question": "What is the freezing point depression constant for water?",
+            "options": [
+                "1.86 K kg/mol",
+                "0.51 K kg/mol",
+                "3.9 K kg/mol",
+                "5.12 K kg/mol"
+            ],
+            "answer": "1.86 K kg/mol"
+        },
+        {
+            "chapter": "Equilibrium",
+            "difficulty": "easy",
+            "question": "What is the equilibrium constant expression for the reaction aA + bB -> cC + dD?",
+            "options": [
+                "K = [C]^c [D]^d / [A]^a [B]^b",
+                "K = [A]^a [B]^b / [C]^c [D]^d",
+                "K = [C]^c [D]^d",
+                "K = [A]^a [B]^b"
+            ],
+            "answer": "K = [C]^c [D]^d / [A]^a [B]^b"
+        },
+        {
+            "chapter": "Equilibrium",
+            "difficulty": "medium",
+            "question": "What is the pH of a solution with [H+] = 1 × 10^-3 M?",
+            "options": [
+                "3",
+                "1",
+                "7",
+                "10"
+            ],
+            "answer": "3"
+        },
+        {
+            "chapter": "Equilibrium",
+            "difficulty": "hard",
+            "question": "What is the solubility product expression for Ag2CrO4?",
+            "options": [
+                "Ksp = [Ag+]^2 [CrO4^2-]",
+                "Ksp = [Ag+] [CrO4^2-]",
+                "Ksp = [Ag+]^2 [CrO4^2-]^2",
+                "Ksp = [Ag+] [CrO4^2-]^2"
+            ],
+            "answer": "Ksp = [Ag+]^2 [CrO4^2-]"
+        },
+        {
+            "chapter": "Redox Reactions and Electrochemistry",
+            "difficulty": "easy",
+            "question": "What is the oxidation state of manganese in KMnO4?",
+            "options": [
+                "+7",
+                "+2",
+                "+4",
+                "+6"
+            ],
+            "answer": "+7"
+        },
+        {
+            "chapter": "Redox Reactions and Electrochemistry",
+            "difficulty": "medium",
+            "question": "What is the standard electrode potential for the hydrogen electrode?",
+            "options": [
+                "0 V",
+                "1 V",
+                "-1 V",
+                "0.5 V"
+            ],
+            "answer": "0 V"
+        },
+        {
+            "chapter": "Redox Reactions and Electrochemistry",
+            "difficulty": "hard",
+            "question": "What is the Nernst equation for a cell reaction at 298 K?",
+            "options": [
+                "E = E° - (0.0592/n) log Q",
+                "E = E° + (0.0592/n) log Q",
+                "E = E° - (0.0257/n) log Q",
+                "E = E° + (0.0257/n) log Q"
+            ],
+            "answer": "E = E° - (0.0592/n) log Q"
+        },
+        {
+            "chapter": "Chemical Kinetics",
+            "difficulty": "easy",
+            "question": "What is the unit of rate constant for a first-order reaction?",
+            "options": [
+                "s^-1",
+                "M s^-1",
+                "M^-1 s^-1",
+                "M^-2 s^-1"
+            ],
+            "answer": "s^-1"
+        },
+        {
+            "chapter": "Chemical Kinetics",
+            "difficulty": "medium",
+            "question": "What is the half-life of a first-order reaction with a rate constant of 0.05 s^-1?",
+            "options": [
+                "13.86 s",
+                "0.693 s",
+                "20 s",
+                "10 s"
+            ],
+            "answer": "13.86 s"
+        },
+        {
+            "chapter": "Chemical Kinetics",
+            "difficulty": "hard",
+            "question": "What is the Arrhenius equation?",
+            "options": [
+                "k = A e^(-Ea/RT)",
+                "k = A e^(Ea/RT)",
+                "k = A e^(-RT/Ea)",
+                "k = A e^(RT/Ea)"
+            ],
+            "answer": "k = A e^(-Ea/RT)"
+        },
+        {
+            "chapter": "Classification of Elements and Periodicity in Properties",
+            "difficulty": "easy",
+            "question": "What is the basis of the modern periodic table?",
+            "options": [
+                "Atomic number",
+                "Atomic mass",
+                "Number of neutrons",
+                "Number of electrons"
+            ],
+            "answer": "Atomic number"
+        },
+        {
+            "chapter": "Classification of Elements and Periodicity in Properties",
+            "difficulty": "medium",
+            "question": "Which group in the periodic table contains the noble gases?",
+            "options": [
+                "Group 1",
+                "Group 2",
+                "Group 17",
+                "Group 18"
+            ],
+            "answer": "Group 18"
+        },
+        {
+            "chapter": "Classification of Elements and Periodicity in Properties",
+            "difficulty": "hard",
+            "question": "What is the trend of ionization energy across a period in the periodic table?",
+            "options": [
+                "Increases",
+                "Decreases",
+                "Remains constant",
+                "No trend"
+            ],
+            "answer": "Increases"
+        },
+        {
+            "chapter": "p-block elements",
+            "difficulty": "easy",
+            "question": "Which element is a liquid at room temperature?",
+            "options": [
+                "Bromine",
+                "Chlorine",
+                "Iodine",
+                "Fluorine"
+            ],
+            "answer": "Bromine"
+        },
+        {
+            "chapter": "p-block elements",
+            "difficulty": "medium",
+            "question": "What is the hybridization of the central atom in SF6?",
+            "options": [
+                "sp3",
+                "sp3d",
+                "sp3d2",
+                "sp"
+            ],
+            "answer": "sp3d2"
+        },
+        {
+            "chapter": "p-block elements",
+            "difficulty": "hard",
+            "question": "What is the shape of the PCl5 molecule?",
+            "options": [
+                "Trigonal bipyramidal",
+                "Tetrahedral",
+                "Square planar",
+                "Octahedral"
+            ],
+            "answer": "Trigonal bipyramidal"
+        },
+        {
+            "chapter": "d- and f-block elements",
+            "difficulty": "easy",
+            "question": "Which of the following is a transition element?",
+            "options": [
+                "Iron",
+                "Calcium",
+                "Magnesium",
+                "Aluminum"
+            ],
+            "answer": "Iron"
+        },
+        {
+            "chapter": "d- and f-block elements",
+            "difficulty": "medium",
+            "question": "What is the electronic configuration of Cu?",
+            "options": [
+                "[Ar] 4s1 3d10",
+                "[Ar] 4s2 3d9",
+                "[Ar] 4s2 3d8",
+                "[Ar] 4s1 3d9"
+            ],
+            "answer": "[Ar] 4s1 3d10"
+        },
+        {
+            "chapter": "d- and f-block elements",
+            "difficulty": "hard",
+            "question": "What is the color of KMnO4 in solution?",
+            "options": [
+                "Purple",
+                "Green",
+                "Yellow",
+                "Blue"
+            ],
+            "answer": "Purple"
+        },
+        {
+            "chapter": "Coordination Compounds",
+            "difficulty": "easy",
+            "question": "What is the coordination number of the central metal ion in [Co(NH3)6]Cl3?",
+            "options": [
+                "6",
+                "4",
+                "3",
+                "2"
+            ],
+            "answer": "6"
+        },
+        {
+            "chapter": "Coordination Compounds",
+            "difficulty": "medium",
+            "question": "What is the IUPAC name of [Pt(NH3)2Cl2]?",
+            "options": [
+                "Diamminedichloroplatinum(II)",
+                "Diamminedichloroplatinum(IV)",
+                "Diamminedichloroplatinum(0)",
+                "Diamminedichloroplatinum(III)"
+            ],
+            "answer": "Diamminedichloroplatinum(II)"
+        },
+        {
+            "chapter": "Coordination Compounds",
+            "difficulty": "hard",
+            "question": "What is the geometry of the [Ni(CN)4]^2- ion?",
+            "options": [
+                "Square planar",
+                "Tetrahedral",
+                "Octahedral",
+                "Linear"
+            ],
+            "answer": "Square planar"
+        },
+        {
+            "chapter": "Purification and Characterization of Organic Compounds",
+            "difficulty": "easy",
+            "question": "What is the technique used to separate a mixture of two liquids with different boiling points?",
+            "options": [
+                "Distillation",
+                "Filtration",
+                "Crystallization",
+                "Sublimation"
+            ],
+            "answer": "Distillation"
+        },
+        {
+            "chapter": "Purification and Characterization of Organic Compounds",
+            "difficulty": "medium",
+            "question": "What is the technique used to separate a mixture of two solids with different solubilities?",
+            "options": [
+                "Crystallization",
+                "Filtration",
+                "Distillation",
+                "Sublimation"
+            ],
+            "answer": "Crystallization"
+        },
+        {
+            "chapter": "Purification and Characterization of Organic Compounds",
+            "difficulty": "hard",
+            "question": "What is the technique used to separate a mixture of two solids where one sublimes?",
+            "options": [
+                "Sublimation",
+                "Filtration",
+                "Distillation",
+                "Crystallization"
+            ],
+            "answer": "Sublimation"
+        },
+        {
+            "chapter": "Some Basic Principles of Organic Chemistry",
+            "difficulty": "easy",
+            "question": "What is the hybridization of carbon in methane?",
+            "options": [
+                "sp3",
+                "sp2",
+                "sp",
+                "sp3d"
+            ],
+            "answer": "sp3"
+        },
+        {
+            "chapter": "Some Basic Principles of Organic Chemistry",
+            "difficulty": "medium",
+            "question": "What is the shape of the methane molecule?",
+            "options": [
+                "Tetrahedral",
+                "Square planar",
+                "Trigonal planar",
+                "Linear"
+            ],
+            "answer": "Tetrahedral"
+        },
+        {
+            "chapter": "Some Basic Principles of Organic Chemistry",
+            "difficulty": "hard",
+            "question": "What is the bond angle in methane?",
+            "options": [
+                "109.5°",
+                "90°",
+                "120°",
+                "180°"
+            ],
+            "answer": "109.5°"
+        },
+        {
+            "chapter": "Hydrocarbons",
+            "difficulty": "easy",
+            "question": "What is the general formula for alkanes?",
+            "options": [
+                "CnH2n+2",
+                "CnH2n",
+                "CnH2n-2",
+                "CnHn"
+            ],
+            "answer": "CnH2n+2"
+        },
+        {
+            "chapter": "Hydrocarbons",
+            "difficulty": "medium",
+            "question": "What is the general formula for alkenes?",
+            "options": [
+                "CnH2n",
+                "CnH2n+2",
+                "CnH2n-2",
+                "CnHn"
+            ],
+            "answer": "CnH2n"
+        },
+        {
+            "chapter": "Hydrocarbons",
+            "difficulty": "hard",
+            "question": "What is the general formula for alkynes?",
+            "options": [
+                "CnH2n-2",
+                "CnH2n",
+                "CnH2n+2",
+                "CnHn"
+            ],
+            "answer": "CnH2n-2"
+        },
+        {
+            "chapter": "Organic Compounds containing Halogen",
+            "difficulty": "easy",
+            "question": "What is the functional group in chloroethane?",
+            "options": [
+                "-Cl",
+                "-OH",
+                "-NH2",
+                "-COOH"
+            ],
+            "answer": "-Cl"
+        },
+        {
+            "chapter": "Organic Compounds containing Halogen",
+            "difficulty": "medium",
+            "question": "What is the IUPAC name of CH3CH2Cl?",
+            "options": [
+                "Chloroethane",
+                "Chloromethane",
+                "Chloropropane",
+                "Chlorobutane"
+            ],
+            "answer": "Chloroethane"
+        },
+        {
+            "chapter": "Organic Compounds containing Halogen",
+            "difficulty": "hard",
+            "question": "What is the product of the reaction between CH3CH2Br and NaOH?",
+            "options": [
+                "CH3CH2OH",
+                "CH2=CH2",
+                "CH3CH3",
+                "CH3CH2CH2OH"
+            ],
+            "answer": "CH2=CH2"
+        },
+        {
+            "chapter": "Organic Compounds containing Oxygen",
+            "difficulty": "easy",
+            "question": "What is the functional group in ethanol?",
+            "options": [
+                "-OH",
+                "-Cl",
+                "-NH2",
+                "-COOH"
+            ],
+            "answer": "-OH"
+        },
+        {
+            "chapter": "Organic Compounds containing Oxygen",
+            "difficulty": "medium",
+            "question": "What is the IUPAC name of CH3CH2OH?",
+            "options": [
+                "Ethanol",
+                "Methanol",
+                "Propanol",
+                "Butanol"
+            ],
+            "answer": "Ethanol"
+        },
+        {
+            "chapter": "Organic Compounds containing Oxygen",
+            "difficulty": "hard",
+            "question": "What is the product of the oxidation of ethanol?",
+            "options": [
+                "Ethanal",
+                "Ethanoic acid",
+                "Ethane",
+                "Ethene"
+            ],
+            "answer": "Ethanoic acid"
+        },
+        {
+            "chapter": "Organic Compounds containing Nitrogen",
+            "difficulty": "easy",
+            "question": "What is the functional group in methylamine?",
+            "options": [
+                "-NH2",
+                "-OH",
+                "-Cl",
+                "-COOH"
+            ],
+            "answer": "-NH2"
+        },
+        {
+            "chapter": "Organic Compounds containing Nitrogen",
+            "difficulty": "medium",
+            "question": "What is the IUPAC name of CH3NH2?",
+            "options": [
+                "Methylamine",
+                "Ethylamine",
+                "Propylamine",
+                "Butylamine"
+            ],
+            "answer": "Methylamine"
+        },
+        {
+            "chapter": "Organic Compounds containing Nitrogen",
+            "difficulty": "hard",
+            "question": "What is the product of the reaction between CH3NH2 and HNO2?",
+            "options": [
+                "CH3OH",
+                "CH3NHOH",
+                "CH3N2+",
+                "CH3NHCH3"
+            ],
+            "answer": "CH3OH"
+        },
+        {
+            "chapter": "Biomolecules",
+            "difficulty": "easy",
+            "question": "What is the monomer of proteins?",
+            "options": [
+                "Amino acids",
+                "Nucleotides",
+                "Monosaccharides",
+                "Fatty acids"
+            ],
+            "answer": "Amino acids"
+        },
+        {
+            "chapter": "Biomolecules",
+            "difficulty": "medium",
+            "question": "What is the monomer of nucleic acids?",
+            "options": [
+                "Nucleotides",
+                "Amino acids",
+                "Monosaccharides",
+                "Fatty acids"
+            ],
+            "answer": "Nucleotides"
+        },
+        {
+            "chapter": "Biomolecules",
+            "difficulty": "hard",
+            "question": "What is the structure of DNA?",
+            "options": [
+                "Double helix",
+                "Single helix",
+                "Triple helix",
+                "Quadruple helix"
+            ],
+            "answer": "Double helix"
+        }
+    ]
+}
