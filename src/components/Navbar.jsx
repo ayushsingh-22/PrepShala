@@ -95,7 +95,7 @@ const Navbar = () => {
               Authentication Required
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
-              You need to be logged in to access the Mock Test feature. Would you like to login or create a new account?
+              Login Needed!! 
             </p>
             <div className="flex flex-col sm:flex-row gap-3">
               <button

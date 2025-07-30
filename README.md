@@ -153,4 +153,4 @@ Project Link: [https://github.com/yourusername/PrepShala](https://github.com/you
 
 ---
 
-Built with ❤️ for JEE aspirants
+Built with ❤️ for Aspirants

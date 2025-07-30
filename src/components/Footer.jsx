@@ -6,9 +6,30 @@ const Footer = () => {
         <p>Contact: info@testshala.com</p>
         <p>Address: New Delhi, India</p>
         <div className="flex justify-center gap-4 mt-2">
-          <a href="#" className="hover:text-blue-600 dark:hover:text-white">Facebook</a>
-          <a href="#" className="hover:text-blue-600 dark:hover:text-white">Instagram</a>
-          <a href="#" className="hover:text-blue-600 dark:hover:text-white">Twitter</a>
+          <a
+            href="https://facebook.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 dark:hover:text-white"
+          >
+            Facebook
+          </a>
+          <a
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 dark:hover:text-white"
+          >
+            Instagram
+          </a>
+          <a
+            href="https://twitter.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-600 dark:hover:text-white"
+          >
+            Twitter
+          </a>
         </div>
         <p className="text-sm text-gray-500 dark:text-gray-400">&copy; 2025 TestShala. All rights reserved.</p>
       </div>
