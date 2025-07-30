@@ -105,9 +105,25 @@ PrepShala/
 
 ## 📱 Screenshots
 
-![Home Page](https://example.com/screenshots/home.png)
-![Test Configuration](https://example.com/screenshots/config.png)
-![Test Interface](https://example.com/screenshots/test.png)
+<div align="center">
+  <table>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/b1d72c31-fa0e-4a51-b204-696144f34328" width="250"/></td>
+      <td><img src="https://github.com/user-attachments/assets/87acb5cf-76de-42af-8fee-aead07cd3d76" width="250"/></td>
+      <td><img src="https://github.com/user-attachments/assets/7d91da9c-2cf0-4b2c-854b-0490b17bb121" width="250"/></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/9a8d2643-3404-4c71-8232-a292d5dff86f" width="250"/></td>
+      <td><img src="https://github.com/user-attachments/assets/675a5add-08aa-4a3a-a8a6-765d4e231096" width="250"/></td>
+      <td><img src="https://github.com/user-attachments/assets/1d5a085b-8c21-4927-8ec7-1b4856992bd3" width="250"/></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/user-attachments/assets/9600f597-9014-436b-b180-7563603cc616" width="250"/></td>
+      <td></td>
+      <td></td>
+    </tr>
+  </table>
+</div>
 
 ## 🚦 Usage
 
