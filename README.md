@@ -4,7 +4,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
 
-**PrepShala** is a comprehensive online platform designed to help JEE aspirants prepare effectively through structured mock tests, topic-wise practice, and personalized analytics.
+**PrepShala** is a comprehensive online platform designed to help aspirants prepare effectively through structured mock tests, topic-wise practice, and personalized analytics.
 
 ## 🚀 Features
 
