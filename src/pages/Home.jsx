@@ -14,7 +14,6 @@ const Home = () => {
   return (
     <div className="text-gray-800 dark:text-white bg-white dark:bg-gray-900 transition-colors duration-300">
 
-      {/* Hero Section */}
       <motion.section
         className="bg-blue-50 dark:bg-gray-800 py-16 text-center"
         initial={{ opacity: 0, y: -20 }}
