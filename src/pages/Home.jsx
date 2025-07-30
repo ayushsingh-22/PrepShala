@@ -8,7 +8,7 @@ import {
   whyChooseUs,
   cta,
   testimonials,
-} from '../data/homeContent';
+} from '../data/HomeContent.js';
 
 const Home = () => {
   return (
