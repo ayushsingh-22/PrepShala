@@ -165,8 +165,6 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Your Name - [Ayush Kumar](mailto:ayushkumar2205@gmail.com)
 
-Project Link: [https://github.com/yourusername/PrepShala](https://github.com/yourusername/PrepShala)
-
 ---
 
 Built with ❤️ for Aspirants
