@@ -1,10 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import questionsData from "../data/questions.json";
 import Calculator from "../components/Calculator";
+import { useAuth } from "../context/AuthContext";
+import { saveTestResult } from "../services/firestoreService";
 
 const TestScreen = () => {
   const navigate = useNavigate();
+  const { currentUser } = useAuth();
 
   const [questions, setQuestions] = useState([]);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -15,12 +18,95 @@ const TestScreen = () => {
   const [showSubmitSummary, setShowSubmitSummary] = useState(false);
   const [isCheatDetected, setIsCheatDetected] = useState(false);
   const [showCalculator, setShowCalculator] = useState(false);
+  const [testConfig, setTestConfig] = useState({});
+  const [initialTime, setInitialTime] = useState(900);
+
+  // Define handleFinalSubmit function first so it can be used in useEffect hooks
+  const handleFinalSubmit = useCallback(async () => {
+    // Calculate test results
+    let correct = 0;
+    let incorrect = 0;
+    let unattempted = 0;
+    const questionResults = [];
+
+    questions.forEach((q, index) => {
+      const userAnswer = selectedAnswers[index];
+      const isCorrect = userAnswer === q.answer;
+      
+      if (!userAnswer) {
+        unattempted++;
+      } else if (isCorrect) {
+        correct++;
+      } else {
+        incorrect++;
+      }
+
+      questionResults.push({
+        questionId: `q${index}`,
+        chapter: q.chapter,
+        difficulty: q.difficulty,
+        question: q.question,
+        userAnswer: userAnswer || null,
+        correctAnswer: q.answer,
+        isCorrect: isCorrect,
+        wasMarked: markedQuestions.includes(index)
+      });
+    });
+
+    const score = questions.length > 0 ? (correct / questions.length) * 100 : 0;
+    const timeTaken = initialTime - timeLeft;
+
+    // Prepare test data
+    const testData = {
+      testConfig: {
+        subject: testConfig.subject || 'Chemistry',
+        scope: testConfig.scope || 'complete',
+        chapters: testConfig.selectedTopics || [],
+        difficulty: testConfig.difficulty || 'All',
+        duration: initialTime
+      },
+      results: {
+        totalQuestions: questions.length,
+        attempted: Object.keys(selectedAnswers).length,
+        correct: correct,
+        incorrect: incorrect,
+        unattempted: unattempted,
+        marked: markedQuestions.length,
+        score: Math.round(score * 100) / 100,
+        timeTaken: timeTaken,
+        timeLeft: timeLeft
+      },
+      questionResults: questionResults,
+      antiCheatFlags: {
+        tabSwitches: tabSwitchCount,
+        fullscreenExits: 0
+      }
+    };
+
+    // Save to Firestore
+    try {
+      if (currentUser) {
+        await saveTestResult(currentUser.uid, testData);
+        console.log('Test results saved successfully');
+      }
+    } catch (error) {
+      console.error('Error saving test results:', error);
+    }
+
+    // Clean up and navigate
+    localStorage.removeItem("testAnswers");
+    localStorage.removeItem("markedQuestions");
+    localStorage.removeItem("testConfig");
+    navigate("/dashboard");
+  }, [questions, selectedAnswers, markedQuestions, initialTime, timeLeft, testConfig, tabSwitchCount, currentUser, navigate]);
 
   useEffect(() => {
     const loadConfigAndQuestions = () => {
       try {
         const config = JSON.parse(localStorage.getItem("testConfig")) || {};
+        setTestConfig(config);
         setTimeLeft(config.testDuration || 900);
+        setInitialTime(config.testDuration || 900);
 
         const filtered = questionsData.chemistry_questions.filter(q =>
           (!config.difficulty || q.difficulty.toLowerCase() === config.difficulty.toLowerCase()) &&
@@ -56,8 +142,18 @@ const TestScreen = () => {
       };
     };
 
+    const enterFullscreen = () => {
+      if (!document.fullscreenElement) {
+        if (confirm("Enter fullscreen for better experience?")) {
+          document.documentElement.requestFullscreen().catch(err => {
+            console.warn('Fullscreen request failed:', err);
+          });
+        }
+      }
+    };
+
     loadConfigAndQuestions();
-    requestFullscreen();
+    enterFullscreen();
     const cleanup = disableCheatActions();
     return cleanup;
   }, []);
@@ -69,14 +165,15 @@ const TestScreen = () => {
         if (prev <= 1) {
           clearInterval(timer);
           alert("Time has expired. Submitting your test.");
-          setShowSubmitSummary(true);
-          setTimeout(handleFinalSubmit, 5000);
+          setTimeout(() => {
+            handleFinalSubmit();
+          }, 3000);
         }
         return prev - 1;
       });
     }, 1000);
     return () => clearInterval(timer);
-  }, []);
+  }, [handleFinalSubmit]);
 
   // 🚨 Tab Switch Detection
   useEffect(() => {
@@ -87,7 +184,9 @@ const TestScreen = () => {
           if (newCount >= 5) {
             setIsCheatDetected(true);
             setShowSubmitSummary(true);
-            setTimeout(handleFinalSubmit, 10000);
+            setTimeout(() => {
+              handleFinalSubmit();
+            }, 10000);
           } else {
             alert("Warning: Tab switching is being recorded.");
           }
@@ -97,7 +196,7 @@ const TestScreen = () => {
     };
     document.addEventListener("visibilitychange", handleVisibilityChange);
     return () => document.removeEventListener("visibilitychange", handleVisibilityChange);
-  }, []);
+  }, [handleFinalSubmit]);
 
   // 💾 Save state changes
   useEffect(() => {
@@ -107,12 +206,6 @@ const TestScreen = () => {
   useEffect(() => {
     localStorage.setItem("markedQuestions", JSON.stringify(markedQuestions));
   }, [markedQuestions]);
-
-  const requestFullscreen = () => {
-    if (!document.fullscreenElement && confirm("Enter fullscreen for better experience?")) {
-      document.documentElement.requestFullscreen().catch(console.error);
-    }
-  };
 
   const handleOptionSelect = (index, option) => {
     setSelectedAnswers(prev => ({ ...prev, [index]: option }));
@@ -124,12 +217,6 @@ const TestScreen = () => {
         ? prev.filter(i => i !== currentQuestionIndex)
         : [...prev, currentQuestionIndex]
     );
-  };
-
-  const handleFinalSubmit = () => {
-    localStorage.removeItem("testAnswers");
-    localStorage.removeItem("markedQuestions");
-    navigate("/");
   };
 
   const formatTime = secs =>
@@ -187,11 +274,17 @@ const TestScreen = () => {
             )}
 
             <div className="mt-4 flex gap-4">
-              <button onClick={handleFinalSubmit} className="bg-green-600 w-full text-white py-2 rounded">
+              <button 
+                onClick={handleFinalSubmit} 
+                className="bg-green-600 hover:bg-green-700 w-full text-white py-2 rounded font-semibold transition-colors duration-200"
+              >
                 Submit Test
               </button>
               {!isCheatDetected && (
-                <button onClick={() => setShowSubmitSummary(false)} className="bg-gray-300 dark:bg-gray-700 w-full py-2 rounded">
+                <button 
+                  onClick={() => setShowSubmitSummary(false)} 
+                  className="bg-gray-300 hover:bg-gray-400 dark:bg-gray-700 dark:hover:bg-gray-600 w-full py-2 rounded font-semibold transition-colors duration-200"
+                >
                   Continue
                 </button>
               )}
@@ -232,10 +325,10 @@ const TestScreen = () => {
 
           <p className="mb-4">{question?.question}</p>
           <div className="space-y-2">
-            {question?.options.map((opt, i) => (
+            {(question?.options || []).map((opt, i) => (
               <label key={i} className="block p-2 bg-gray-100 dark:bg-gray-700 rounded">
                 <input type="radio" className="mr-2"
-                  checked={selectedAnswers[currentQuestionIndex] === opt}
+                  checked={selectedAnswers[currentQuestionIndex] === opt || false}
                   onChange={() => handleOptionSelect(currentQuestionIndex, opt)} />
                 {opt}
               </label>
